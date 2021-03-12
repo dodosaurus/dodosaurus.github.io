@@ -1,15 +1,13 @@
 import React from 'react'
+import Footer from './Footer'
+import Navbar from './Navbar'
 
 const Layout = ( {children} ) => {
     return (
-        <main>
-            <nav>
-
-            </nav>
+        <main className="min-h-screen bg-eggshell font-body text-3xl">
+            <Navbar />
                 { children }
-            <footer>
-
-            </footer>
+            <Footer />
         </main>
     )
 };

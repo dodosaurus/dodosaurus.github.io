@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exported.css">
+    <title>JK Portfolio Website</title>
+</head>
+
+<body>
+    
+        <!-- global container -->
+        <main class="bg-independence font-sans"> 
+
+            <!-- INDEX -->
+            <div class="flex flex-col min-h-screen">
+                <!-- navigation -->
+                <nav class="flex h-20 justify-center items-center">
+                    <span>
+                        <img class="w-9 md:w-14 m-3 inline-block" src="icons/down-arrow.png" alt="">
+                        <p class="inline-block text-independence-text text-xl font-light">Choose the part of my brain</p>
+                        <img class="w-9 md:w-14 m-3 inline-block" src="icons/down-arrow.png" alt="">
+                    </span>
+                </nav>
+
+                <!-- headers and skills section -->
+                <section class="flex flex-grow md:flex-row flex-col items-center justify-center h-auto py-5">
+                    <!-- react dev chlievik -->
+                    <div class="relative flex flex-col items-center w-1/2 mx-3">
+                        <div class="absolute h-64 w-100 m-10 bg-terracotta rounded-lg shadow-xl transform rotate-12 z-0"></div>
+                        <figure class="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-terracotta-light cursor-pointer">
+                            <img class="w-32 m-5" src="icons/react.png" alt="">
+                            <h3 class="text-4xl font-bold">React Developer</h3>
+                        </figure>
+                    </div>
+
+                    <!-- test automation chlievik -->
+                    <div class="relative flex flex-col items-center w-1/2 mx-3">
+                        <div class="absolute h-64 w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
+                        <figure class="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light cursor-pointer">
+                            <img class="w-32 m-5" src="icons/robot.png" alt="">
+                            <h3 class="text-4xl font-bold">Automation Engineer</h3>
+                        </figure>
+                    </div>
+                </section>
+
+                <footer class="flex md:flex-row flex-col min-h-20 p-3 justify-between items-center bg-independence">
+                    <span>
+                        <p class="text-independence-text text-xl font-light">(Sorry for the colors, I am not designer.)</p>
+                    </span>
+                    <img class="w-20" src="icons/dino.png" alt="">
+                    <span>
+                        <p class="text-independence-text text-xl font-light">Click the dinosaur, to get my contact info.</p>
+                    </span>
+                </footer>
+
+            </div>
+
+        </main>
+
+</body>
+
+</html>

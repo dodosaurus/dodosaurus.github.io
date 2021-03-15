@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectsSection = () => {
     return (
-        <section className="w-screen min-h-screen ">
+        <section className="h-40">
 
         </section>
     )

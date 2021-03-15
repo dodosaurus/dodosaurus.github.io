@@ -3,8 +3,12 @@ import React from 'react'
 const Navbar = () => {
     
     return (       
-        <nav className="w-screen h-20 bg-independence shadow-xl">
-            <h1 className="p-5 text-white">Jozef Kováč</h1>
+        <nav className="flex items-center justify-end w-screen h-16 border-b text-independence">
+            <ul className="flex gap-5 py-5 mx-7">
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
         </nav>
     )
 }

@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const Layout = ( {children} ) => {
     return (
-        <main className="min-h-screen bg-eggshell font-body text-3xl">
+        <main className="min-h-screen bg-eggshell">
             <Navbar />
                 { children }
             <Footer />

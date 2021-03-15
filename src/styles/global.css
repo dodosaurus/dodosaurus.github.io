@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Lora';
-    src: local('Lora'), url(../fonts/Lora-VariableFont_wght.ttf) format('ttf');
-  }
-
 /* @layer components {
 
     .navbar {

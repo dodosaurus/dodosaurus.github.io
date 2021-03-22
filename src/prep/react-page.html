@@ -6,55 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="exported.css">
-    <title>JK Portfolio Website</title>
+    <title>React Section</title>
 </head>
 
 <body>
-    
-        <!-- global container -->
-        <main class="bg-eggshell font-sans"> 
 
-            <!-- INDEX -->
-            <div class="flex flex-col min-h-screen">
-                <!-- navigation -->
-                <nav class="flex h-20 justify-center items-center">
-                    <span>
-                        <img class="w-9 md:w-14 m-3 inline-block" src="icons/down-arrow.png" alt="">
-                        <p class="inline-block text-eggshell-text text-xl font-light">Choose one part of my brain</p>
-                        <img class="w-9 md:w-14 m-3 inline-block" src="icons/down-arrow.png" alt="">
-                    </span>
-                </nav>
+    <!-- global container -->
+    <main class="bg-independence font-sans">
 
-                <!-- headers and skills section -->
-                <section class="flex flex-grow md:flex-row flex-col items-center justify-center h-auto py-5">
-                    <!-- react dev chlievik -->
-                    <div class="relative flex flex-col items-center w-1/2 mx-3">
-                        <div class="absolute h-64 w-96 m-10 bg-terracotta rounded-lg shadow-xl transform rotate-6 z-0"></div>
-                        <figure class="flex flex-col flex-shrink-0 items-center h-64 w-96 m-10 bg-white rounded-lg shadow-xl z-10 hover:bg-terracotta-light cursor-pointer">
-                            <img class="w-32 m-5" src="icons/react.png" alt="">
-                            <h3 class="mt-2 text-4xl font-semibold">React Developer</h3>
-                        </figure>
+        <!-- INDEX -->
+        <div class="md:container md:mx-auto flex flex-col min-h-screen text-xl font-light">
+            <!-- navigation -->
+            <nav class="flex h-20 px-5 m-1 mt-2 justify-center rounded-xl items-center gap-4 bg-eggshell shadow-xl">
+                <span>
+                    <h1 class="text-4xl font-bold">React Developer</h1>
+                </span>
+                <span>
+                    <img class="w-14" src="icons/react.png" alt="">
+                </span>
+            </nav>
+
+            <!-- skills -->
+            <section
+                class="flex lg:flex-row flex-col flex-shrink items-center justify-center m-1 p-3 bg-terracotta-light rounded-xl z-0">
+                <div
+                    class="flex md:flex-row flex-col justify-around w-auto lg:w-1/2 p-5 m-2 bg-independence text-independence-text rounded-xl">
+                    <div class="text-center m-2">
+                        <h3 class="font-bold mb-2">Building material:</h3>
+                        <ul>
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>Thunk</li>
+                            <li>Gatsby</li>
+                            <li>Tailwind</li>
+                            <li>Bulma</li>
+                            <li>Firebase</li>
+                        </ul>
                     </div>
-
-                    <!-- test automation chlievik -->
-                    <div class="relative flex flex-col items-center w-1/2 mx-3">
-                        <div class="absolute h-64 w-96 m-10 bg-greensheen rounded-lg shadow-xl transform rotate-6 z-0"></div>
-                        <figure class="flex flex-col flex-shrink-0 items-center h-64 w-96 m-10 bg-white rounded-lg shadow-xl z-10 hover:bg-greensheen-light hover cursor-pointer">
-                            <img class="w-32 m-5" src="icons/robot.png" alt="">
-                            <h3 class="text-4xl">Automation Engineer</h3>
-                        </figure>
+                    <div class="w-72 h-72 flex-shrink-0 m-3 rounded-xl border-2 border-independence-text">
+                        <img class="w-14"src="./icons/logos/bulma-icon.svg" alt="">
+                        <img class="w-14"src="./icons/logos/gatsby-logo.svg" alt="">
+                        <img class="w-14"src="./icons/logos/react-icon.svg" alt="">
                     </div>
-                </section>
+                </div>
 
-                <footer class="flex h-20 justify-center items-center">
-                    <span>
-                        <p class="inline-block text-eggshell-text text-xl font-light">(Sorry for the colors, I am not designer.)</p>
-                    </span>
-                </footer>
+                <div
+                    class="flex md:flex-row flex-col justify-around w-auto lg:w-1/2 p-5 m-2 bg-independence text-independence-text rounded-xl">
+                     <div class="text-center m-2">   
+                        <h3 class="font-bold mb-2">Tools to build:</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="w-72 h-72 flex-shrink-0 m-3 rounded-xl border-2 border-independence-text">
+                        <img class="w-14"src="./icons/logos/visual-studio-logo.svg" alt="">
+                        <img class="w-14"src="./icons/logos/github-logo.svg" alt="">
+                    </div>
+                </div>
+            </section>
 
-            </div>
+            <!-- projects -->
+            <section class="flex flex-col p-5 m-1 mb-3 bg-terracotta-light rounded-xl items-center">
+                <div class="h-auto p-3 bg-chlebiatko-bg rounded-xl border-2 border-independence mb-2">
+                    <div class="flex flex-col z-10 mt-32 rounded-xl bg-independence text-independence-text p-5">
+                        <h3 class="font-bold mb-2">Chlebiatko Blog</h3>
+                        <p class="mb-4 z-20">Little blogging platform for hobby baker. Web app was made from zero
+                            without CMS. Frontend was created with React and Bulma, state management with
+                            Redux and Thunk. Firebase and its modules are used as backend layer (authentication
+                            handling, DB, storage and in this case also hosting).</p>
+                        <a class="self-center px-4 pt-2 pb-2.5 text-center text-terracotta-light rounded-xl shadow-xl bg-terracotta"
+                            href="https://chlebiatko-blog.web.app/">Visit the website</a>
+                    </div>
+                </div>
+                <div class="w-full h-auto p-3 bg-dino-green rounded-xl border-2 border-independence mb-2">
+                    <div class="flex flex-col z-10 rounded-xl bg-independence text-independence-text p-5">
+                        <h3 class="font-bold mb-2">...this website</h3>
+                        <p class="mb-2">Static site generator Gatsby used for logic layer (it is based on React), no CMS
+                            (markdowns used instead). For styling I used Tailwind (and I love it). </p>
+                        <a class="self-center px-4 pt-2 pb-2.5 text-center text-dino-yellow"
+                            href="https://chlebiatko-blog.web.app/">Just look around, you don't need to leave this magnificient page.</a>
+                    </div>
+                </div>
+                <p class="mt-1">More to come...</p>
+            </section>
 
-        </main>
+            <!-- buffer -->
+            <div class="flex-grow"></div>
+
+            <footer class="flex lg:flex-row flex-col min-h-20 p-5 justify-between items-center bg-independence">
+                <span>
+                    <p class="text-independence-text text-xl font-light">(Sorry for the colors, I am not a designer.)</p>
+                </span>
+                <img class="w-20" src="icons/dino.png" alt="">
+                <span>
+                    <p class="text-independence-text text-xl font-light">Click the dinosaur, to get my contact info.</p>
+                </span>
+            </footer>
+
+        </div>
+
+    </main>
 
 </body>
 

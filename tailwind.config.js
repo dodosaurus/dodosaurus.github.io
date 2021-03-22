@@ -14,11 +14,16 @@ module.exports = {
         'greensheen': '#81b29a',
         'greensheen-light': '#D9E8E1',
         'deepchampagne': '#f2cc8f',
-        'deepchampagne-text': '#A46D13'
+        'deepchampagne-text': '#A46D13',
+        'dino-green': '#98db7c',
+        'dino-yellow': '#ffe55a',
       },
       spacing: {
         '100': '25rem',
     },
+    backgroundImage: theme => ({
+      'chlebiatko-bg': "url('/src/prep/images/chlebiatko-title.PNG')",
+     })
   },
   variants: {
     extend: {},

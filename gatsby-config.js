@@ -13,6 +13,14 @@ module.exports = {
       name: `assets`,
       path: `${__dirname}\\src\\assets\\`,
     },
+  },
+  {
+    resolve: `gatsby-source-contentful`,
+    options: {
+      spaceId: `wuu9d0fv1il2`,
+      // Learn about environment variables: https://gatsby.dev/env-vars
+      accessToken: 'KNvRbOxu-bu5IRFAL541lZ5x-4BADwWnqgCUHeZBAmo',
+    },
   }
 ],
   siteMetadata: {
@@ -23,3 +31,7 @@ module.exports = {
     infoFooter: "Click the dinosaur, to get my contact info."
   }
 }
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})

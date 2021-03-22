@@ -22,11 +22,14 @@ module.exports = {
         '100': '25rem',
     },
     backgroundImage: theme => ({
-      'chlebiatko-bg': "url('/src/prep/images/chlebiatko-title.PNG')",
+      'chlebiatko-bg': "url('/src/assets/images/chlebiatko-title.PNG')",
      })
   },
   variants: {
-    extend: {},
+    extend: {
+      rotate: ['group-hover', 'hover'],
+      transform: ['group-hover', 'hover'],
+    },
   },
   plugins: [],
 }

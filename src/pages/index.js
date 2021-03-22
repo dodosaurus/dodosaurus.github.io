@@ -1,15 +1,11 @@
 import React from "react"
-import HeroSection from "../components/HeroSection"
+import LandingPage from "../components/LandingPage"
 import Layout from "../components/Layout"
-import ProjectsSection from "../components/ProjectsSection"
-import SkillsSection from "../components/SkillsSection"
 
 const Home = () => {
   return (
     <Layout>
-      <HeroSection />
-      <SkillsSection />
-      <ProjectsSection />
+      <LandingPage />
     </Layout>
   )
 }

@@ -26,10 +26,7 @@ module.exports = {
      })
   },
   variants: {
-    extend: {
-      rotate: ['group-hover', 'hover'],
-      transform: ['group-hover', 'hover'],
-    },
+    rotate: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [],
 }

@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-postcss`,`gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+  plugins: [`gatsby-plugin-postcss`,`gatsby-transformer-sharp`, `gatsby-plugin-sharp`, `gatsby-transformer-inline-svg`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {

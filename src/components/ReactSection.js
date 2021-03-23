@@ -1,44 +1,14 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { useReactSectionQuery } from '../hooks/useReactSectionQuery'
 
 const ReactSection = () => {
-  const data = useStaticQuery(graphql`
-    query ReactSectionQuery {
-      allFile(filter: { relativeDirectory: { eq: "icons" } }) {
-        nodes {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-          name
-        }
-      }
-      allContentfulProject(filter: { section: { eq: "react" } }) {
-        nodes {
-          bgImage {
-            file {
-              url
-            }
-          }
-          desc {
-            desc
-          }
-          link
-          title
-          id
-        }
-      }
-    }
-  `)
-
+  const { projects, images, techs } = useReactSectionQuery();
+  
   const getFluidFromArray = nameOfImage => {
-    return data.allFile.nodes.filter(item => item.name === nameOfImage)[0]
+    return images.filter(item => item.name === nameOfImage)[0]
       .childImageSharp.fluid
   }
-
-  const projects = data.allContentfulProject.nodes
 
   return (
     <>
@@ -58,57 +28,37 @@ const ReactSection = () => {
 
       <section className="flex lg:flex-row flex-col flex-shrink items-center justify-center m-1 p-3 bg-terracotta-light rounded-xl z-0">
         <div className="flex md:flex-row flex-col justify-around w-auto lg:w-1/2 p-3 m-2 bg-independence text-independence-text rounded-xl border-2 border-independence-text">
+        
           <div className="text-center m-2">
             <h3 className="font-bold m-2">JS frameworks:</h3>
             <ul>
-              <li>
-                <img
-                  className="w-8 mr-2 inline-block"
-                  src="./icons/logos/react.svg"
-                  alt=""
-                ></img>
-                React
-              </li>
-              <li>
-                <img
-                  className="w-7 mr-2 inline-block"
-                  src="./icons/logos/gatsby.svg"
-                  alt=""
-                ></img>
-                Gatsby
-              </li>
+              {techs.filter(node => node.type === 'js-framework').map(node => (
+                <li className="flex mt-1 justify-center" key={node.id}>
+                  <div className={`w-${node.logoWidth} mr-2 inline-block`} alt="logo" dangerouslySetInnerHTML={{ __html: node.logo.svg.content }} />
+                  <h4>{node.name}</h4>
+                </li>
+              ))}
             </ul>
             <h3 className="font-bold m-2">CSS frameworks:</h3>
             <ul>
-              <li>
-                <img
-                  className="w-8 mr-2 inline-block"
-                  src="./icons/logos/tailwindcss.svg"
-                  alt=""
-                ></img>
-                Tailwind
-              </li>
-              <li>
-                <img
-                  className="w-5 mr-2 inline-block"
-                  src="./icons/logos/bulma.svg"
-                  alt=""
-                ></img>
-                Bulma
-              </li>
+            {techs.filter(node => node.type === 'css-framework').map(node => (
+                <li className="flex mt-1 justify-center" key={node.id}>
+                  <div className={`w-${node.logoWidth} mr-2 inline-block`} alt="logo" dangerouslySetInnerHTML={{ __html: node.logo.svg.content }} />
+                  <h4>{node.name}</h4>
+                </li>
+              ))}
             </ul>
             <h3 className="font-bold m-2">Backend platform:</h3>
             <ul>
-              <li>
-                <img
-                  className="w-5 mr-2 inline-block"
-                  src="./icons/logos/firebase.svg"
-                  alt=""
-                ></img>
-                Firebase
-              </li>
+            {techs.filter(node => node.type === 'backend').map(node => (
+                <li className="flex mt-1 justify-center" key={node.id}>
+                  <div className={`w-${node.logoWidth} mr-2 inline-block`} alt="logo" dangerouslySetInnerHTML={{ __html: node.logo.svg.content }} />
+                  <h4>{node.name}</h4>
+                </li>
+              ))}
             </ul>
           </div>
+
           <div className="text-center m-2">
             <h3 className="font-bold m-2">CMS:</h3>
             <ul>

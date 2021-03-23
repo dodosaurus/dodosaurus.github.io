@@ -52,7 +52,7 @@ const LandingPage = () => {
           </figure>
         </Link>
 
-        <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3">
+        <Link to="/automation" className="relative flex flex-col items-center w-1/2 mx-3">
           <div className="absolute h-64 w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
           <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("robot") } className="w-32 m-5" src="icons/robot.png" alt=""></Img>

@@ -35,16 +35,16 @@ const AutomationSection = () => {
         <span>
           <Img
             fluid={getFluidFromArray("robot")}
-            className="w-14"
+            className="w-16"
             alt="Logo of robot"
           ></Img>
         </span>
       </nav>
 
-      <section className="flex lg:flex-row flex-col items-center justify-center m-2 p-3 bg-terracotta-light rounded-xl z-0 shadow-xl">
+      <section className="flex lg:flex-row flex-col items-center justify-center m-2 p-3 bg-greensheen-light rounded-xl z-0 shadow-xl">
         <div className="flex md:flex-row flex-col justify-around items-center w-auto lg:w-1/2 p-5 pb-7 m-2 bg-independence text-independence-text rounded-xl shadow-xl gap-4">
           <div className="flex flex-col text-center justify-between -mb-3 md:mb-0">
-            <h3 className="font-bold m-2">JS frameworks:</h3>
+            <h3 className="font-bold m-2">Tools:</h3>
               {techs
                 .filter(node => node.type === "js-framework")
                 .map(node => (
@@ -52,10 +52,10 @@ const AutomationSection = () => {
                     tech={node}
                     key={node.id}
                     setTechDetails={setTechDetails}
-                    type="terracotta"
+                    type="greensheen"
                   />
                 ))}
-            <h3 className="font-bold m-2">CSS frameworks:</h3>
+            <h3 className="font-bold m-2">Frameworks:</h3>
               {techs
                 .filter(node => node.type === "css-framework")
                 .map(node => (
@@ -63,10 +63,10 @@ const AutomationSection = () => {
                     tech={node}
                     key={node.id}
                     setTechDetails={setTechDetails}
-                    type="terracotta"
+                    type="greensheen"
                   />
                 ))}
-            <h3 className="font-bold m-2">Backend platform:</h3>
+            <h3 className="font-bold m-2">Test management:</h3>
               {techs
                 .filter(node => node.type === "backend")
                 .map(node => (
@@ -74,13 +74,13 @@ const AutomationSection = () => {
                     tech={node}
                     key={node.id}
                     setTechDetails={setTechDetails}
-                    type="terracotta"
+                    type="greensheen"
                   />
                 ))}
           </div>
 
           <div className="flex flex-col text-center justify-between">
-            <h3 className="font-bold m-2">CMS:</h3>
+            <h3 className="font-bold m-2">Handy apps:</h3>
               {techs
                 .filter(node => node.type === "CMS")
                 .map(node => (
@@ -88,10 +88,10 @@ const AutomationSection = () => {
                     tech={node}
                     key={node.id}
                     setTechDetails={setTechDetails}
-                    type="terracotta"
+                    type="greensheen"
                   />
                 ))}
-            <h3 className="font-bold m-2">Other tooling I use(d):</h3>
+            <h3 className="font-bold m-2">Other:</h3>
               {techs
                 .filter(node => node.type === "other")
                 .map(node => (
@@ -99,18 +99,7 @@ const AutomationSection = () => {
                     tech={node}
                     key={node.id}
                     setTechDetails={setTechDetails}
-                    type="terracotta"
-                  />
-                ))}
-            <h3 className="font-bold m-2">Also related to this:</h3>
-              {techs
-                .filter(node => node.type === "related")
-                .map(node => (
-                  <TechItem
-                    tech={node}
-                    key={node.id}
-                    setTechDetails={setTechDetails}
-                    type="terracotta"
+                    type="greensheen"
                   />
                 ))}
           </div>
@@ -132,7 +121,7 @@ const AutomationSection = () => {
                 </h3>
               </span>
               <p className="mb-3">{techDetails.desc.desc}</p>
-              {techDetails.name === "GitHub" && <p>Click <a className="font-semibold hover:text-terracotta transition ease-linear duration-200" href={techDetails.link}>HERE</a></p>}
+              {techDetails.name === "GitHub" && <p>Click <a className="font-semibold hover:text-greensheen transition ease-linear duration-200" href={techDetails.link}>HERE</a></p>}
             </div>
           </div>
         )}
@@ -148,27 +137,11 @@ const AutomationSection = () => {
         )}
       </section>
 
-      <section className="flex flex-col p-5 m-2 mb-3 bg-terracotta-light rounded-xl items-center shadow-xl">
+      <section className="flex flex-col p-5 m-2 mb-3 bg-greensheen-light rounded-xl items-center shadow-xl">
         {projects &&
           projects.map(project => (
-            <ProjectItem project={ project } type="terracotta" />
+            <ProjectItem project={ project } type="greensheen" />
           ))}
-
-        <div className="w-full h-auto p-3 bg-dino-green rounded-xl mb-2 mt-2 shadow-xl">
-          <div className="flex flex-col z-10 rounded-xl bg-independence text-independence-text p-5">
-            <h3 className="font-bold mb-2">...this website</h3>
-            <p className="mb-2">
-              Static site generator Gatsby used for logic layer (it is based on
-              React), Contentful for storing and providing content. For styling
-              I used Tailwind.{" "}
-            </p>
-            <p
-              className="self-center px-4 pt-2 pb-2.5 text-center text-dino-yellow"
-            >
-              Just look around, you don't need to leave this magnificient page.
-            </p>
-          </div>
-        </div>
         <p className="mt-1 text-independence">More to come...</p>
       </section>
 

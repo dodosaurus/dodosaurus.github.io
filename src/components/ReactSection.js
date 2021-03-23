@@ -81,7 +81,7 @@ const ReactSection = () => {
           </div>
 
           <div className="flex flex-col text-center justify-between">
-            <h3 className="font-bold m-2">CMS:</h3>
+            <h3 className="font-bold m-2 mb-1">CMS:</h3>
               {techs
                 .filter(node => node.type === "CMS")
                 .map(node => (
@@ -152,7 +152,7 @@ const ReactSection = () => {
       <section className="flex flex-col p-5 m-2 mb-3 bg-terracotta-light rounded-xl items-center shadow-xl">
         {projects &&
           projects.map(project => (
-            <ProjectItem project={ project } type="terracotta" />
+            <ProjectItem project={ project } type="terracotta" key={ project.id }/>
           ))}
 
         <div className="w-full h-auto p-3 bg-dino-green rounded-xl mb-2 mt-2 shadow-xl">

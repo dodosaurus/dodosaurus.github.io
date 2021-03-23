@@ -10,3 +10,9 @@
     }
 
 } */
+
+.tech-item{
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+}

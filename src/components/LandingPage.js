@@ -33,7 +33,7 @@ const LandingPage = () => {
             className="w-9 md:w-14 m-3 inline-block"
             alt="arrow heading down"
           ></Img>
-          <p className="inline-block text-independence-text text-xl font-light">
+          <p className="inline-block text-independence-text text-xl font-light mx-3">
             Choose the part of my brain
           </p>
           <Img
@@ -44,9 +44,9 @@ const LandingPage = () => {
       </nav>
 
       <section className="flex flex-grow lg:flex-row flex-col items-center justify-center h-auto p-5">
-        <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3 group">
-          <div className="absolute h-64 w-100 m-10 bg-terracotta rounded-lg shadow-xl z-0 transform rotate-12 group-hover:rotate-6"></div>
-          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 group-hover:bg-terracotta-light cursor-pointer">
+        <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3">
+          <div className="absolute h-64 w-100 m-10 bg-terracotta rounded-lg shadow-xl z-0 transform rotate-12"></div>
+          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-terracotta-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("react") } className="w-32 m-5" src="icons/react.png" alt=""></Img>
             <h3 className="text-4xl font-bold">React Developer</h3>
           </figure>
@@ -54,7 +54,7 @@ const LandingPage = () => {
 
         <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3">
           <div className="absolute h-64 w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
-          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light cursor-pointer">
+          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("robot") } className="w-32 m-5" src="icons/robot.png" alt=""></Img>
             <h3 className="text-4xl font-bold">Automation Engineer</h3>
           </figure>

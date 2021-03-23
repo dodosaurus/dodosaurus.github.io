@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
-import { useReactSectionQuery } from "../hooks/useReactSectionQuery"
+import { useAutomationSectionQuery } from "../hooks/useAutomationSectionQuery"
 import TechItem from "./TechItem"
 import { Link } from "gatsby"
 import ProjectItem from "./ProjectItem"
 
-const ReactSection = () => {
-  const { projects, images, techs } = useReactSectionQuery()
+const AutomationSection = () => {
+  const { projects, images, techs } = useAutomationSectionQuery()
 
   const getFluidFromArray = nameOfImage => {
     return images.filter(item => item.name === nameOfImage)[0].childImageSharp
@@ -30,14 +30,13 @@ const ReactSection = () => {
           ></Img>
         </Link>
         <span>
-          <h1 className="text-4xl font-bold mb-2">React Developer</h1>
+          <h1 className="text-4xl font-bold mb-2">Automation Engineer</h1>
         </span>
         <span>
           <Img
-            fluid={getFluidFromArray("react")}
+            fluid={getFluidFromArray("robot")}
             className="w-14"
-            src="icons/react.png"
-            alt="Logo of React JS"
+            alt="Logo of robot"
           ></Img>
         </span>
       </nav>
@@ -178,4 +177,4 @@ const ReactSection = () => {
   )
 }
 
-export default ReactSection
+export default AutomationSection

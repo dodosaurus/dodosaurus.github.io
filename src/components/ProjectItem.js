@@ -14,7 +14,7 @@ const ProjectItem = ({ project, type }) => {
         <h3 className="font-bold mb-2">{project.title}</h3>
         <p className="mb-4 z-20">{project.desc.desc}</p>
         <a
-          className={`self-center px-4 pt-2 pb-2.5 text-center text-${type}-light rounded-xl shadow-xl bg-${type} hover:text-independence`}
+          className={`self-center px-4 pt-2 pb-2.5 text-center text-${type}-light rounded-xl shadow-xl bg-${type} hover:text-independence transition ease-linear duration-300`}
           href={project.link}
         >
           Visit the website

@@ -44,7 +44,7 @@ const ContactModal = ({ setModalShown }) => {
       className="fixed flex flex-col justify-center items-center bg-gray-500 inset-0 bg-opacity-50 transition-opacity z-40"
       style={{ backdropFilter: "blur(20px)" }}
     >
-      <div className="w-auto h-auto m-2 lg:mx-28 bg-independence rounded-xl shadow-xl z-50">
+      <div className="w-auto h-auto m-3 bg-independence rounded-xl shadow-xl z-50">
         <nav className="flex justify-around items-center h-16">
           <button className="tech-item" onClick={() => setModalShown(false)}>
             <Img

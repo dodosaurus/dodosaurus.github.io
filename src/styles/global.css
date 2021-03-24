@@ -3,14 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-
-    .navbar {
-        @apply h-screen w-32
-    }
-
-} */
-
 .tech-item{
     background: none !important;
     border: none !important;

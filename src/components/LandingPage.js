@@ -33,9 +33,11 @@ const LandingPage = () => {
             className="w-9 md:w-14 m-3 inline-block"
             alt="arrow heading down"
           ></Img>
-          <p className="inline-block text-independence-text text-xl font-light mx-3">
-            Choose the part of my brain
-          </p>
+          <div className="text-center">
+            <p className="inline text-independence-text text-xl font-light mx-3">
+              Choose the part of my brain
+            </p>
+          </div>
           <Img
             fluid={ getFluidFromArray("down-arrow") }
             className="w-9 md:w-14 m-3 inline-block"
@@ -45,18 +47,18 @@ const LandingPage = () => {
 
       <section className="flex flex-grow lg:flex-row flex-col items-center justify-center h-auto p-5">
         <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3">
-          <div className="absolute h-64 w-100 m-10 bg-terracotta rounded-lg shadow-xl z-0 transform rotate-12"></div>
-          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-terracotta-light transition ease-linear duration-500 cursor-pointer">
+          <div className="absolute h-56 w-80 md:h-64 md:w-100 m-10 bg-terracotta rounded-lg shadow-xl z-0 transform rotate-12"></div>
+          <figure className="flex flex-col flex-shrink-0 items-center h-56 w-80 md:h-64 md:w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-terracotta-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("react") } className="w-32 m-5" src="icons/react.png" alt=""></Img>
-            <h3 className="text-4xl font-bold">React Developer</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">React Developer</h3>
           </figure>
         </Link>
 
         <Link to="/automation" className="relative flex flex-col items-center w-1/2 mx-3">
-          <div className="absolute h-64 w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
-          <figure className="flex flex-col flex-shrink-0 items-center h-64 w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
+          <div className="absolute h-56 w-80 md:h-64 md:w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
+          <figure className="flex flex-col flex-shrink-0 items-center h-56 w-80 md:h-64 md:w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("robot") } className="w-32 m-5" src="icons/robot.png" alt=""></Img>
-            <h3 className="text-4xl font-bold">Automation Engineer</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">Automation Engineer</h3>
           </figure>
         </Link>
       </section>

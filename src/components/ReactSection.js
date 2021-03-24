@@ -29,9 +29,9 @@ const ReactSection = () => {
             alt="arrow back"
           ></Img>
         </Link>
-        <span>
-          <h1 className="text-4xl font-bold mb-2">React Developer</h1>
-        </span>
+        <div className="text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">React Developer</h1>
+        </div>
         <span>
           <Img
             fluid={getFluidFromArray("react")}
@@ -42,10 +42,14 @@ const ReactSection = () => {
         </span>
       </nav>
 
-      <section className="flex lg:flex-row flex-col items-center justify-center m-2 p-3 bg-terracotta-light rounded-xl z-0 shadow-xl">
-        <div className="flex md:flex-row flex-col justify-around items-center w-auto lg:w-1/2 p-5 pb-7 m-2 bg-independence text-independence-text rounded-xl shadow-xl gap-4">
-          <div className="flex flex-col text-center justify-between -mb-3 md:mb-0">
-            <h3 className="font-bold m-2">JS frameworks:</h3>
+      <section className="flex flex-col justify-center m-2 p-3 bg-terracotta-light rounded-xl z-0 shadow-xl">
+        <h3 className="text-3xl text-terracotta mb-3 self-center">
+          Stuff I know...
+        </h3>
+        <div className="flex lg:flex-row flex-col justify-around">
+          <div className="flex md:flex-row flex-col justify-around items-center w-auto lg:w-1/2 p-5 pb-7 m-2 bg-independence text-independence-text rounded-xl shadow-xl gap-4">
+            <div className="flex flex-col text-center justify-around -mb-3 md:mb-0">
+              <h3 className="font-bold m-2">JS frameworks:</h3>
               {techs
                 .filter(node => node.type === "js-framework")
                 .map(node => (
@@ -56,7 +60,7 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
-            <h3 className="font-bold m-2">CSS frameworks:</h3>
+              <h3 className="font-bold m-2">CSS frameworks:</h3>
               {techs
                 .filter(node => node.type === "css-framework")
                 .map(node => (
@@ -67,7 +71,7 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
-            <h3 className="font-bold m-2">Backend platform:</h3>
+              <h3 className="font-bold m-2">Backend platform:</h3>
               {techs
                 .filter(node => node.type === "backend")
                 .map(node => (
@@ -78,10 +82,10 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
-          </div>
+            </div>
 
-          <div className="flex flex-col text-center justify-between">
-            <h3 className="font-bold m-2 mb-1">CMS:</h3>
+            <div className="flex flex-col text-center justify-between">
+              <h3 className="font-bold m-2 mb-1">CMS:</h3>
               {techs
                 .filter(node => node.type === "CMS")
                 .map(node => (
@@ -92,7 +96,7 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
-            <h3 className="font-bold m-2">Other tooling I use(d):</h3>
+              <h3 className="font-bold m-2">Other tooling I use(d):</h3>
               {techs
                 .filter(node => node.type === "other")
                 .map(node => (
@@ -103,7 +107,7 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
-            <h3 className="font-bold m-2">Also related to this:</h3>
+              <h3 className="font-bold m-2">Also related to this:</h3>
               {techs
                 .filter(node => node.type === "related")
                 .map(node => (
@@ -114,45 +118,59 @@ const ReactSection = () => {
                     type="terracotta"
                   />
                 ))}
+            </div>
           </div>
-        </div>
 
-        {techDetails !== null && (
-          <div className="flex md:flex-row flex-col justify-around items-start w-auto lg:w-1/2 p-2 m-2 bg-independence-text text-black rounded-xl shadow-xl">
-            <div className="flex flex-col justify-center items-start text-left m-2">
-              <span className="flex items-center justify-start mb-2">
-                <div
-                  className={`w-${techDetails.logoWidth * 2} mr-2 inline-block`}
-                  alt="logo"
-                  dangerouslySetInnerHTML={{
-                    __html: techDetails.logo.svg.content,
-                  }}
-                />
-                <h3 className="flex lg:flex-row flex-col items-center text-black mb-2 ml-2 font-bold text-2xl">
-                  {techDetails.name}
+          {techDetails !== null && (
+            <div className="flex md:flex-row flex-col justify-around items-start w-auto lg:w-1/2 p-2 m-2 bg-independence-text text-black rounded-xl shadow-xl">
+              <div className="flex flex-col justify-center items-start text-left m-2">
+                <span className="flex items-center justify-start mb-2">
+                  <div
+                    className={`w-${
+                      techDetails.logoWidth * 2
+                    } mr-2 inline-block`}
+                    alt="logo"
+                    dangerouslySetInnerHTML={{
+                      __html: techDetails.logo.svg.content,
+                    }}
+                  />
+                  <h3 className="flex lg:flex-row flex-col items-center text-black mb-2 ml-2 font-bold text-2xl">
+                    {techDetails.name}
+                  </h3>
+                </span>
+                <p className="mb-3">{techDetails.desc.desc}</p>
+                {techDetails.name === "GitHub" && (
+                  <p>
+                    Click{" "}
+                    <a
+                      className="font-semibold hover:text-terracotta transition ease-linear duration-200"
+                      href={techDetails.link}
+                    >
+                      HERE
+                    </a>
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+
+          {techDetails === null && (
+            <div className="flex md:flex-row flex-col justify-center items-center w-auto lg:w-1/2 p-5 m-2 bg-independence-text text-independence rounded-xl shadow-xl">
+              <div className="text-center p-2">
+                <h3 className="flex lg:flex-row flex-col items-center text-black mb-2 italic">
+                  Choose tech from the list to get more info.
                 </h3>
-              </span>
-              <p className="mb-3">{techDetails.desc.desc}</p>
-              {techDetails.name === "GitHub" && <p>Click <a className="font-semibold hover:text-terracotta transition ease-linear duration-200" href={techDetails.link}>HERE</a></p>}
+              </div>
             </div>
-          </div>
-        )}
-
-        {techDetails === null && (
-          <div className="flex md:flex-row flex-col justify-center items-center w-auto lg:w-1/2 p-5 m-2 bg-independence-text text-independence rounded-xl shadow-xl">
-            <div className="text-center p-2">
-              <h3 className="flex lg:flex-row flex-col items-center text-black mb-2 italic">
-                Choose tech from the list to get more info.
-              </h3>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </section>
 
       <section className="flex flex-col p-5 m-2 mb-3 bg-terracotta-light rounded-xl items-center shadow-xl">
+        <h3 className="text-3xl text-terracotta mb-5">I worked on...</h3>
         {projects &&
           projects.map(project => (
-            <ProjectItem project={ project } type="terracotta" key={ project.id }/>
+            <ProjectItem project={project} type="terracotta" key={project.id} />
           ))}
 
         <div className="w-full h-auto p-3 bg-dino-green rounded-xl mb-2 mt-2 shadow-xl">
@@ -163,10 +181,8 @@ const ReactSection = () => {
               React), Contentful for storing and providing content. For styling
               I used Tailwind.{" "}
             </p>
-            <p
-              className="self-center px-4 pt-2 pb-2.5 text-center text-dino-yellow"
-            >
-              Just look around, you don't need to leave this magnificient page.
+            <p className="self-center px-4 pt-2 pb-2.5 text-center text-dino-yellow">
+              Just look around :)
             </p>
           </div>
         </div>

@@ -1,0 +1,2 @@
+(self.webpackChunkJKWeb=self.webpackChunkJKWeb||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var l=n(5444),a=n(7294),c=n(1632);t.default=function(){return a.createElement(c.Z,null,a.createElement("section",null,a.createElement("h3",{className:"text-independence-text"},"404 - Page not found (Let me walk you ",a.createElement(l.rU,{to:"/index.html"},"Home"),")")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-73f3deacfc4244b83341.js.map

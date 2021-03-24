@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
 
   const handleClick = () => {
     setModalShown(true)
-    console.log(modalShown)
   }
 
   const { infoFooter } = data.site.siteMetadata
@@ -40,7 +39,7 @@ const Layout = ({ children }) => {
         {children}
 
         <footer className="flex lg:flex-row flex-col min-h-20 p-5 -mt-2 justify-center items-center bg-independence">
-          <button onClick={handleClick}>
+          <button className="tech-item" onClick={handleClick}>
             <Img
               fluid={dino}
               className="w-20 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"

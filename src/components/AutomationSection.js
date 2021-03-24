@@ -134,7 +134,7 @@ const AutomationSection = () => {
               <div className="flex flex-col z-10 md:mt-40 rounded-xl bg-independence text-independence-text p-5">
                 <h3 className="font-bold mb-2"> {project.title}</h3>
                 <p className="z-20">{project.desc.desc}</p>
-                <ul className="list-disc pl-4 my-2">
+                <ul className="list-disc pl-6 my-3">
                   <li>store, validate and provide data about charging stations</li>
                   <li>handle authorizations, based on the way customer is charging the car</li>
                   <li>load management system, that allowed clients dynamically manage kWh load coming to their infrastructure</li>

@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
     <main className="bg-independence font-sans">
       {modalShown && <ContactModal setModalShown={setModalShown} />}
 
-      <div className="md:container md:mx-auto flex flex-col min-h-screen text-xl font-light">
+      <div className="md:container md:mx-auto flex flex-col min-h-screen text-2xl font-light">
         {children}
 
         <footer className="flex lg:flex-row flex-col min-h-20 p-5 -mt-2 justify-center items-center bg-independence">
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
             ></Img>
           </button>
           <div className="ml-4 text-center">
-            <p className="text-independence-text text-xl font-light">
+            <p className="text-independence-text text-2xl font-light">
               {infoFooter}
             </p>
           </div>

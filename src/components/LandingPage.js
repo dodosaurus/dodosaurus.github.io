@@ -34,7 +34,7 @@ const LandingPage = () => {
             alt="arrow heading down"
           ></Img>
           <div className="text-center">
-            <p className="inline text-independence-text text-xl font-light mx-3">
+            <p className="inline text-independence-text text-2xl font-light mx-3">
               Choose the part of my brain
             </p>
           </div>

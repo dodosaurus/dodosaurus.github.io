@@ -45,21 +45,21 @@ const ContactModal = ({ setModalShown }) => {
       style={{ backdropFilter: "blur(20px)" }}
     >
       <div className="w-auto h-auto m-3 bg-independence rounded-xl shadow-xl z-50">
-        <nav className="flex justify-around items-center h-16">
+        <nav className="flex justify-start items-center h-16">
           <button className="tech-item" onClick={() => setModalShown(false)}>
             <Img
               fluid={getFluidFromArray("close")}
-              className="inline-block w-8 md:w-10 mt-2 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"
+              className="inline-block w-8 md:w-10 m-3 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"
               alt="close icon"
             ></Img>
           </button>
-          <div className="text-center">
+        </nav>
+        <main className="flex flex-col m-5 justify-center items-center">
+        <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Contact information
             </h2>
             </div>
-        </nav>
-        <main className="flex flex-col m-5 justify-center items-center">
           <div>
             <figure>
               <Img

@@ -5,6 +5,12 @@ import Img from "gatsby-image"
 const ContactModal = ({ setModalShown }) => {
   const data = useStaticQuery(graphql`
     query ModalQuery {
+      site {
+        siteMetadata {
+          email
+          linkedin
+        }
+      }
       allFile(filter: { relativeDirectory: { eq: "icons" } }) {
         nodes {
           childImageSharp {
@@ -82,8 +88,8 @@ const ContactModal = ({ setModalShown }) => {
 
               {contactShown && <figure className="flex flex-col justify-center items-center mt-2 gap-1 rounded-xl bg-white p-3">
                 <h3 className="font-bold">Jozef Kováč</h3>
-                <span>jozefitko@gmail.com</span>
-                <a href="https://www.linkedin.com/in/kovacjozef">
+                <span>{data.site.siteMetadata.email}</span>
+                <a href={data.site.siteMetadata.linkedin}>
                   <Img
                     fluid={getFluidFromArray("linkedin")}
                     className="w-8 mt-1 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"

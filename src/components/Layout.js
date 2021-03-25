@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           infoFooter
-          funnyFooter
         }
       }
       file(relativePath: { eq: "icons/dino.png" }) {

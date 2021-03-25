@@ -42,6 +42,10 @@ export const useAutomationSectionQuery = () => {
           logo {
             svg {
               content
+              dataURI
+            }
+            file {
+              url
             }
           }
         }

@@ -42,6 +42,10 @@ export const useReactSectionQuery = () => {
           logo {
             svg {
               content
+              dataURI
+            }
+            file {
+              url
             }
           }
         }

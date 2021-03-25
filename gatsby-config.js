@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-postcss`,`gatsby-transformer-sharp`, `gatsby-plugin-sharp`, `gatsby-transformer-inline-svg`,
+  plugins: [`gatsby-plugin-postcss`,`gatsby-transformer-sharp`, `gatsby-plugin-sharp`, `gatsby-transformer-inline-svg`, 'gatsby-plugin-optimize-svgs', "gatsby-plugin-react-svg",`gatsby-plugin-image`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -27,8 +27,9 @@ module.exports = {
     title: "JK Portfolio Web",
     description: "Little tiny web app providing CV-like info.",
     copyright: "This website is copyright 2021 @ JK",
-    funnyFooter: "(Sorry for the colors, I am not a designer.)",
-    infoFooter: "To contact me, click the dino."
+    infoFooter: "To contact me, click the dino.",
+    email: "kovac.jozef25@gmail.com",
+    linkedin: "https://www.linkedin.com/in/kovacjozef"
   }
 }
 

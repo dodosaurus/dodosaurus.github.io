@@ -125,15 +125,17 @@ const ReactSection = () => {
             <div className="flex md:flex-row flex-col justify-around items-start w-auto lg:w-1/2 p-2 m-2 bg-independence-text text-black rounded-xl shadow-xl">
               <div className="flex flex-col justify-center items-start text-left m-2">
                 <span className="flex items-center justify-start mb-2">
-                  <div
+                  <img style={{width: '3rem'}} className={`w-${techDetails.logoWidth * 2} mr-2 inline-block`} src={techDetails.logo.file.url} alt={`${techDetails.name} logo`}/>
+                  {/* <div
+                    style={{width: '3rem'}}
                     className={`w-${
                       techDetails.logoWidth * 2
                     } mr-2 inline-block`}
-                    alt="logo"
+                    alt={`${techDetails.name} logo`}
                     dangerouslySetInnerHTML={{
                       __html: techDetails.logo.svg.content,
                     }}
-                  />
+                  /> */}
                   <h3 className="flex lg:flex-row flex-col items-center text-black mb-2 ml-2 font-bold text-2xl">
                     {techDetails.name}
                   </h3>

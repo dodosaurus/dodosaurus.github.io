@@ -46,7 +46,7 @@ const LandingPage = () => {
       </nav>
 
       <section className="flex flex-grow lg:flex-row flex-col items-center justify-center h-auto p-5">
-        <Link to="/react" className="relative flex flex-col items-center w-1/2 mx-3">
+        <Link to="/react" className="no-select relative flex flex-col items-center w-1/2 mx-3">
           <div className="absolute h-56 w-80 md:h-64 md:w-100 m-10 bg-terracotta rounded-lg shadow-xl z-0 transform rotate-12"></div>
           <figure className="flex flex-col flex-shrink-0 items-center h-56 w-80 md:h-64 md:w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-terracotta-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("react") } className="w-32 m-5" src="icons/react.png" alt=""></Img>
@@ -54,7 +54,7 @@ const LandingPage = () => {
           </figure>
         </Link>
 
-        <Link to="/automation" className="relative flex flex-col items-center w-1/2 mx-3">
+        <Link to="/automation" className="no-select relative flex flex-col items-center w-1/2 mx-3">
           <div className="absolute h-56 w-80 md:h-64 md:w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
           <figure className="flex flex-col flex-shrink-0 items-center h-56 w-80 md:h-64 md:w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
             <Img fluid={ getFluidFromArray("robot") } className="w-32 m-5" src="icons/robot.png" alt=""></Img>

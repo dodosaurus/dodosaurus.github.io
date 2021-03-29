@@ -10,7 +10,7 @@ const ProjectItem = ({ project, type }) => {
       }}
       key={project.id}
     >
-      <div className="flex flex-col z-10 mt-20 md:mt-32 rounded-xl bg-independence text-independence-text p-5">
+      <div className="flex flex-col z-10 mt-20 md:mt-32 rounded-xl bg-independence p-5">
         <h3 className="font-bold mb-2">{project.title}</h3>
         <p className="mb-4 z-20">{project.desc.desc}</p>
         <a

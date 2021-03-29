@@ -45,9 +45,9 @@ const AutomationSection = () => {
           Stuff I know...
         </h3>
         <div className="flex lg:flex-row flex-col justify-around">
-          <div className="flex md:flex-row flex-col justify-around items-center w-auto lg:w-1/2 p-5 pb-7 m-2 bg-independence text-independence-text rounded-xl shadow-xl gap-4">
+          <div className="flex md:flex-row flex-col justify-around items-center w-auto lg:w-1/2 p-5 pb-7 m-2 bg-independence rounded-xl shadow-xl gap-4">
             <div className="flex flex-col text-center justify-between -mb-3 md:mb-0">
-              <h3 className="font-bold m-2">Test automation:</h3>
+              <h3 className="font-bold m-2 text-independence-text">Test automation:</h3>
               {techs
                 .filter(node => node.type === "auto-test")
                 .map(node => (
@@ -58,7 +58,7 @@ const AutomationSection = () => {
                     type="greensheen"
                   />
                 ))}
-              <h3 className="font-bold m-2">Manual testing:</h3>
+              <h3 className="font-bold m-2 text-independence-text">Manual testing:</h3>
               {techs
                 .filter(node => node.type === "manual-test")
                 .map(node => (
@@ -72,7 +72,7 @@ const AutomationSection = () => {
             </div>
 
             <div className="flex flex-col text-center justify-between">
-              <h3 className="font-bold m-2">Other:</h3>
+              <h3 className="font-bold m-2 text-independence-text">Other:</h3>
               {techs
                 .filter(node => node.type === "other")
                 .map(node => (

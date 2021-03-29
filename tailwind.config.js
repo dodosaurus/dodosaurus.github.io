@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ["./src/components/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -20,10 +20,7 @@ module.exports = {
       },
       spacing: {
         '100': '25rem',
-    },
-    backgroundImage: theme => ({
-      'chlebiatko-bg': "url('/src/assets/images/chlebiatko-title.PNG')",
-     })
+    }
   },
   variants: {
     rotate: ['responsive', 'hover', 'focus', 'active', 'group-hover'],

@@ -6,9 +6,10 @@ export const useAutomationSectionQuery = () => {
       allFile(filter: { relativeDirectory: { eq: "icons" } }) {
         nodes {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 300
+              placeholder: TRACED_SVG
+            )
           }
           name
         }

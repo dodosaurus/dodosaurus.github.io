@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react"
-import Img from "gatsby-image"
 import { useAutomationSectionQuery } from "../hooks/useAutomationSectionQuery"
 import TechItem from "./TechItem"
 import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const AutomationSection = () => {
   const { projects, images, techs } = useAutomationSectionQuery()
 
   const getFluidFromArray = nameOfImage => {
     return images.filter(item => item.name === nameOfImage)[0].childImageSharp
-      .fluid
+      .gatsbyImageData
   }
 
   const [techDetails, setTechDetails] = useState(null)
@@ -22,21 +22,21 @@ const AutomationSection = () => {
     <>
       <nav className="flex h-20 px-5 m-2 mt-4 justify-between rounded-xl items-center gap-4 bg-eggshell shadow-xl">
         <Link to="/">
-          <Img
-            fluid={getFluidFromArray("left-arrow")}
+          <GatsbyImage
+            image={getFluidFromArray("left-arrow")}
             className="inline-block w-10"
             alt="arrow back"
-          ></Img>
+          ></GatsbyImage>
         </Link>
         <div className="text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Automation Engineer</h1>
         </div>
         <span>
-          <Img
-            fluid={getFluidFromArray("robot")}
+          <GatsbyImage
+            image={getFluidFromArray("robot")}
             className="w-16"
             alt="Logo of robot"
-          ></Img>
+          ></GatsbyImage>
         </span>
       </nav>
 

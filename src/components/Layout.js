@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import ContactModal from "./ContactModal"
 
 const Layout = ({ children }) => {
@@ -13,9 +13,10 @@ const Layout = ({ children }) => {
       }
       file(relativePath: { eq: "icons/dino.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            width: 100
+            placeholder: TRACED_SVG
+          )
         }
       }
     }
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
   }
 
   const { infoFooter } = data.site.siteMetadata
-  const { fluid: dino } = data.file.childImageSharp
+  const { gatsbyImageData: dino } = data.file.childImageSharp
 
   return (
     <main className="bg-independence font-sans">
@@ -39,11 +40,11 @@ const Layout = ({ children }) => {
 
         <footer className="flex lg:flex-row flex-col min-h-20 p-5 -mt-2 justify-center items-center bg-independence">
           <button className="tech-item" onClick={handleClick}>
-            <Img
-              fluid={dino}
+            <GatsbyImage
+              image={dino}
               className="w-20 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"
               alt="dinosaur"
-            ></Img>
+            ></GatsbyImage>
           </button>
           <div className="ml-4 text-center">
             <p className="text-independence-text text-2xl font-light">

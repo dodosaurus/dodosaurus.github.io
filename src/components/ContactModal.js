@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const ContactModal = ({ setModalShown }) => {
   const data = useStaticQuery(graphql`
@@ -14,29 +14,31 @@ const ContactModal = ({ setModalShown }) => {
       allFile(filter: { relativeDirectory: { eq: "icons" } }) {
         nodes {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 50
+              placeholder: TRACED_SVG
+            )
           }
           name
         }
       }
       file(relativePath: { eq: "myPhotoCrop.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            width: 600
+            placeholder: TRACED_SVG
+          )
         }
       }
     }
   `)
 
   const images = data.allFile.nodes
-  const photo = data.file.childImageSharp.fluid
+  const photo = data.file.childImageSharp.gatsbyImageData;
 
   const getFluidFromArray = nameOfImage => {
     return images.filter(item => item.name === nameOfImage)[0].childImageSharp
-      .fluid
+      .gatsbyImageData
   }
 
   const [contactShown, setContactShown] = useState(false)
@@ -53,11 +55,11 @@ const ContactModal = ({ setModalShown }) => {
       <div className="w-auto h-auto m-3 bg-independence rounded-xl shadow-xl z-50">
         <nav className="flex justify-start items-center h-16">
           <button className="tech-item" onClick={() => setModalShown(false)}>
-            <Img
-              fluid={getFluidFromArray("close")}
+            <GatsbyImage
+              image={getFluidFromArray("close")}
               className="inline-block w-8 md:w-10 m-3 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"
               alt="close icon"
-            ></Img>
+            ></GatsbyImage>
           </button>
         </nav>
         <main className="flex flex-col m-5 justify-center items-center">
@@ -68,11 +70,11 @@ const ContactModal = ({ setModalShown }) => {
             </div>
           <div>
             <figure>
-              <Img
-                fluid={photo}
+              <GatsbyImage
+                image={photo}
                 className="inline-block w-80 h-80 md:w-100 md:h-100 m-5 rounded-full shadow-xl"
-                alt="close icon"
-              ></Img>
+                alt="photo of JK"
+              ></GatsbyImage>
             </figure>
           </div>
           <div className="flex flex-col items-center justify-center bg-independence-text text-independence text-xl font-light shadow-xl rounded-xl w-80 md:w-100 h-auto p-5">
@@ -90,11 +92,11 @@ const ContactModal = ({ setModalShown }) => {
                 <h3 className="font-bold">Jozef Kováč</h3>
                 <span>{data.site.siteMetadata.email}</span>
                 <a href={data.site.siteMetadata.linkedin}>
-                  <Img
-                    fluid={getFluidFromArray("linkedin")}
+                  <GatsbyImage
+                    image={getFluidFromArray("linkedin")}
                     className="w-8 mt-1 cursor-pointer transform hover:rotate-6 transition ease-linear duration-500"
                     alt="close icon"
-                  ></Img>
+                  ></GatsbyImage>
                 </a>
               </figure>}
 

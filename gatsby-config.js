@@ -21,6 +21,15 @@ module.exports = {
       // Learn about environment variables: https://gatsby.dev/env-vars
       accessToken: 'KNvRbOxu-bu5IRFAL541lZ5x-4BADwWnqgCUHeZBAmo',
     },
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Jozef Kováč`,
+      short_name: `JK`,
+      start_url: `/`,
+      icon: `src/assets/icons/dino.png`
+    },
   }
 ],
   siteMetadata: {

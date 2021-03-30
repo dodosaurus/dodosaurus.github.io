@@ -24,6 +24,7 @@ module.exports = {
   },
   variants: {
     rotate: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    textColor: ['hover']
   },
   plugins: [],
 }

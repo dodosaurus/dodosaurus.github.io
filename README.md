@@ -1,6 +1,6 @@
 ## 🚀 JK Web
 
-Portofolio website built with Gatsby and Tailwind. Hosting is planned on Netlify.
+Portofolio website built with Gatsby and Tailwind. Hosting is planned on Netlify/GitHub Pages.
 
 1. When preparing Gatsby+Tailwind boilerplate, follow guides on both docu's simulatenously. It took me long time to set it up.
 

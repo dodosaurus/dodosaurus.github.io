@@ -10081,24 +10081,24 @@ if (false) {} else {
 /***/ }),
 
 /***/ "react-dom/server":
-/*!**********************************************************************************************************!*\
-  !*** external "C:\\Users\\kovac\\Documents\\Coding\\github\\jk-web\\node_modules\\react-dom\\server.js" ***!
-  \**********************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** external "C:\\Users\\Jozef\\Documents\\Coding\\dodosaurus.github.io\\node_modules\\react-dom\\server.js" ***!
+  \****************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\kovac\\Documents\\Coding\\github\\jk-web\\node_modules\\react-dom\\server.js");;
+module.exports = require("C:\\Users\\Jozef\\Documents\\Coding\\dodosaurus.github.io\\node_modules\\react-dom\\server.js");;
 
 /***/ }),
 
 /***/ "react":
-/*!*****************************************************************************************************!*\
-  !*** external "C:\\Users\\kovac\\Documents\\Coding\\github\\jk-web\\node_modules\\react\\index.js" ***!
-  \*****************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** external "C:\\Users\\Jozef\\Documents\\Coding\\dodosaurus.github.io\\node_modules\\react\\index.js" ***!
+  \***********************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\kovac\\Documents\\Coding\\github\\jk-web\\node_modules\\react\\index.js");;
+module.exports = require("C:\\Users\\Jozef\\Documents\\Coding\\dodosaurus.github.io\\node_modules\\react\\index.js");;
 
 /***/ }),
 

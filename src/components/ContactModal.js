@@ -21,7 +21,7 @@ const ContactModal = ({ setModalShown }) => {
       }
       file(relativePath: { eq: "myPhotoCrop.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 600, placeholder: TRACED_SVG)
+          gatsbyImageData(width: 550, placeholder: TRACED_SVG)
         }
       }
     }
@@ -66,7 +66,7 @@ const ContactModal = ({ setModalShown }) => {
             <figure>
               <GatsbyImage
                 image={photo}
-                className="inline-block w-72 h-72 md:w-100 md:h-100 m-5 rounded-full shadow-xl"
+                className="inline-block w-72 h-72 m-5 rounded-full shadow-xl"
                 alt="photo of JK"
               ></GatsbyImage>
             </figure>

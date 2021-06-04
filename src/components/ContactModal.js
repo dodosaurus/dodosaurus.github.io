@@ -66,7 +66,7 @@ const ContactModal = ({ setModalShown }) => {
             <figure>
               <GatsbyImage
                 image={photo}
-                className="inline-block w-72 h-72 m-5 rounded-full shadow-xl"
+                className="inline-block w-72 h-72 md:w-80 md:h-80 m-5 rounded-full shadow-xl"
                 alt="photo of JK"
               ></GatsbyImage>
             </figure>

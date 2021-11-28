@@ -6,7 +6,7 @@ const Seo = () => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>JK</title>
-          <link rel="canonical" href="http://jkovac.sk/" />
+          <link rel="canonical" href="http://dodosaurus.github.io/" />
         </Helmet>
     )
 }

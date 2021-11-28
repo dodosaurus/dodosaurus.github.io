@@ -59,7 +59,7 @@ const LandingPage = () => {
           <div className="absolute h-56 w-80 md:h-64 md:w-100 m-10 bg-greensheen rounded-lg shadow-xl transform -rotate-12 z-0"></div>
           <figure className="flex flex-col flex-shrink-0 items-center h-56 w-80 md:h-64 md:w-100 m-10 bg-eggshell rounded-lg shadow-xl z-10 hover:bg-greensheen-light transition ease-linear duration-500 cursor-pointer">
             <GatsbyImage image={ getFluidFromArray("robot") } className="w-32 m-5" src="icons/robot.png" alt=""></GatsbyImage>
-            <h3 className="text-3xl md:text-4xl font-bold">Automation Engineer</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">TA Engineer</h3>
           </figure>
         </Link>
       </section>

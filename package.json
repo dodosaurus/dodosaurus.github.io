@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build-css": "tailwindcss build src/prep/style.css -o src/prep/exported.css"
+    "build-css": "tailwindcss build src/prep/style.css -o src/prep/exported.css",
+    "gh-deploy": "git subtree push --prefix public origin gh-pages"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",

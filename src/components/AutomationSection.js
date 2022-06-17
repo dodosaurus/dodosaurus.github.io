@@ -29,7 +29,7 @@ const AutomationSection = () => {
           ></GatsbyImage>
         </Link>
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Automation Engineer</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Test Automation</h1>
         </div>
         <span>
           <GatsbyImage
@@ -140,7 +140,10 @@ const AutomationSection = () => {
                   <li>load management system, that allowed clients dynamically manage kWh load coming to their infrastructure</li>
                   <li>route the info about the each charging session performed to other parts of domain matrix and many more</li>
                 </ul>
-                <p className="mb-4">Through the years, I was part of different teams and had different responsiblities - from E2E test automation in pure tester team, to full stack functional testing in backend team.</p>
+                <p className="mb-4">Through the years, I was part of different teams and had different responsiblities, here are some key points:</p>
+                <p className="mb-4">2018 to 2019 -&gt; E2E test automation - using <b>UFT/ALM</b>, automating long flows that started from web application frontend, came through microservice matrix and ended for ex. in SAP or Salesforce</p>
+                <p className="mb-4">2019 to 2021 -&gt; functional test automation - coming down the project structure, I started working on more specific backend functional tests - using <b>UFT/ALM</b>, usually contacting REST/messaging API then checking database, or checking if service emitted expected data structure; part of responsibility was also doing integration tests (mostly manual, highly specific testcases in cooperation with other team)</p>
+                <p className="mb-4">2021 to present -&gt; still testing on same level, but breaking point was introduction of <b>Cypress</b> to backend test automation instead of obsolete UFT; with previous Cypress experience, I played and I am playing big role in designing framework, planning migration, doing system wise decisions and last but not least - supporting other colleagues with getting into the new way of working.</p>
                 <a
                   className={`self-center px-4 pt-2 pb-2.5 text-center text-greensheen-light rounded-xl shadow-xl bg-greensheen hover:text-independence transition ease-linear duration-300`}
                   href={project.link}

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ContactModal from "./ContactModal"
-import SEO from './SEO'
+import Seo from './Seo'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
   return (
     <main className="bg-independence font-sans">
 
-      <SEO />
+      <Seo />
 
       {modalShown && <ContactModal setModalShown={setModalShown} />}
 
